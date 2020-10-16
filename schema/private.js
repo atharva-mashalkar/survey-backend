@@ -23,10 +23,10 @@ const RootQuery = new GraphQLObjectType({
             type: SurveyType,
             args: {
                 token: { type: GraphQLString },
-                id: { type: GraphQLString }
+                surveyId: { type: GraphQLString }
             },
             resolve(parent, args) {
-                return SurveyController.sendingSurveyQuestions(args.token, args.id)
+                return SurveyController.sendingSurveyQuestions(args.token, args.surveyId)
             }
         },
         gettingSurveyResults: {

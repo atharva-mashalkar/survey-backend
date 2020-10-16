@@ -41,7 +41,7 @@ const QuestionInputType = new GraphQLInputObjectType({
 const SurveyType = new GraphQLObjectType({
     name: 'survey',
     fields: () => ({
-        id: { type: GraphQLString },
+        surveyId: { type: GraphQLString },
         questions: { type: new GraphQLList(QuestionType) },
         answers: { type: new GraphQLList(AnswerType) },
         token: { type: GraphQLString },

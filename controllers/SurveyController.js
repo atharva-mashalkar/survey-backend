@@ -126,7 +126,7 @@ exports.getResults = async (token,surveyId) => {
            var no = 0;
            answers.forEach(answer => {
             if(answer.questionNumber === i){
-                if(answer.answer === "yes" ){
+                if(answer.answer === "yes" || answer.answer === "Yes" || answer.answer === "y"){
                     yes = yes+1;
                 }else{
                     no = no+1;
